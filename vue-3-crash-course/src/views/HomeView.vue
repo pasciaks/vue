@@ -1,5 +1,6 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import TheWelcome from "../components/TheWelcome.vue";
+import HeaderView from "./HeaderView.vue";
 </script>
 
 <template>

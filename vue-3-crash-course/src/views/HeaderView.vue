@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <nav>
-      <li class="cropped">
-        <img src="../assets/download.png" alt="logo" />
+      <li>
+        <img id="github-image" src="../assets/download.png" alt="logo" />
       </li>
       <li>
         <RouterLink to="/">Home</RouterLink>
@@ -10,9 +10,9 @@
       <li>
         <RouterLink to="/about">About</RouterLink>
       </li>
-      <liv>
-        <RouterLink to="/header">Header Only</RouterLink>
-      </liv>
+      <li>
+        <RouterLink to="/info">Info</RouterLink>
+      </li>
     </nav>
   </div>
 </template>
@@ -23,56 +23,45 @@
   color: white;
 }
 
+#github-image {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
 a {
-  padding: 0 10px;
-  margin: 0 5px;
-  border: 1px dashed gold;
+  margin: 15px 15px;
 }
 
 li {
   display: inline;
   list-style: none;
-  vertical-align: middle;
-}
-
-img {
-  width: 40px;
-  height: 40px;
-}
-
-.cropped img {
-  overflow: hidden;
-  border: 1px solid black;
-  margin-top: 5px;
+  vertical-align: top;
+  padding-top: 15px;
 }
 
 @media (max-width: 768px) {
-  /* .header {
-    background-color: cyan;
-  } */
   li {
     display: inline-block;
     list-style: none;
   }
 }
 
-@media (max-width: 380px) {
-  /* .header {
-    background-color: yellow;
-  } */
-  li {
-    display: inline-block;
-    list-style: none;
+@media (max-width: 180px) {
+  header {
+    width: 180px;
   }
 }
 
-@media (max-width: 280px) {
+@media (min-width: 1024px) {
   .header {
-    display: none;
-  }
-  li {
-    display: inline-block;
-    list-style: none;
+    display: block;
+    background-color: transparent;
+    color: black;
+    margin: 10px;
+    padding: 10px;
   }
 }
 </style>
